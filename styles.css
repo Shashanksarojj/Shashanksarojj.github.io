@@ -216,6 +216,13 @@ transition: .3s ease;
   font-size: 1.6rem;
 }
 
+.skill_stack{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
 .projects{
   background: var(--second-bg-color);
 }
