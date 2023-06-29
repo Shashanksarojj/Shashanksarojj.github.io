@@ -285,6 +285,10 @@ transition: .3s ease;
   margin-bottom: 10rem;
 }
 
+.calendar{
+overflow: hidden;
+}
+
 .git-image{
 display: flex;
 /* width: 100%; */
@@ -321,6 +325,9 @@ height: 140px;
 
 }
 
+#contact-email{
+  overflow:hidden;
+}
 
 #contact-email a:link {
   color: green;
@@ -361,7 +368,11 @@ margin-top: 2%;
     /* justify-content: space-between;Z */
     display: flex;
     flex-wrap: wrap;
+    /* width: 70%; */
     
+  }
+  .git-image img{
+    width: 100%;
   }
 }
 
