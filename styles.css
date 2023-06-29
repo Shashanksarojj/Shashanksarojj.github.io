@@ -223,6 +223,19 @@ transition: .3s ease;
   gap: 3rem;
 }
 
+.skills h2{
+  margin-bottom: 10rem;
+}
+.skills i{
+  font-size: 15rem;
+  color: var(--main-color);
+  margin: 6rem 2rem 6rem 2rem; 
+}
+
+.skills-card-name{
+  display: none;
+}
+
 .projects{
   background: var(--second-bg-color);
 }
@@ -279,14 +292,20 @@ transition: .3s ease;
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
-.skills h2{
-  margin-bottom: 10rem;
-}
-.skills i{
-  font-size: 15rem;
-  color: var(--main-color);
-  margin: 6rem 2rem 6rem 2rem; 
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .resume h2{
   margin-bottom: 10rem;
