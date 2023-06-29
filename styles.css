@@ -306,6 +306,7 @@ margin-bottom: 1%;
 .git-image img{
 /* width: 30%; */
 height: 140px;
+overflow: hidden;
 }
 
 
@@ -360,10 +361,13 @@ height: 140px;
   text-decoration: underline;
 }
 
-.hide button{
+/* .hide button{
 margin-left: 30vw;
 margin-top: 2%;
-}
+background-color: yellow;
+} */
+
+
 
 
 
