@@ -276,16 +276,12 @@
     //     responsive: true
     // });
 
-
-    GitHubCalendar(".calendar", "Shashanksarojj");
-    
-    // or enable responsive functionality:
     GitHubCalendar(".calendar", "Shashanksarojj", { responsive: true });
 
     // Use a proxy
-    // GitHubCalendar(".calendar", "Shashanksarojj", {
-    //   proxy(username) {
-    //     return fetch(`https://your-proxy.com/github?user=${Shashanksarojj}`)
-    //   }
-    // }).then(r => r.text())
+    GitHubCalendar(".calendar", "Shashanksarojj", {
+      proxy(username) {
+        return fetch(`https://your-proxy.com/github?user=${Shashanksarojj}`)
+      }
+    }).then(r => r.text())
 </script>
