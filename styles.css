@@ -402,6 +402,7 @@ footer{
 @media (max-width:1200px) {
   html{
     font-size: 55%;
+    margin-left: 5%;
   }
   .git-image{
     /* justify-content: space-between;Z */
