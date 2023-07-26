@@ -157,8 +157,15 @@ transition: .3s ease;
   transition: .3s ease;
 }
 
+
+
 .btn:hover{
   box-shadow: none;
+}
+
+.btn1{
+  /* display: none; */
+  background: none;
 }
 
 
