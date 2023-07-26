@@ -178,6 +178,8 @@ transition: .3s ease;
   align-items: center;
   gap: 2rem;
   background: var(--second-bg-color);
+  
+  
 
 }
 
