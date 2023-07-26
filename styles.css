@@ -166,6 +166,7 @@ transition: .3s ease;
 .btn1{
   /* display: none; */
   background: none;
+  border-radius: 5%;
 }
 
 
