@@ -167,6 +167,7 @@ transition: .3s ease;
   /* display: none; */
   background: none;
   border-radius: 5%;
+  color: red;
 }
 
 
