@@ -1,9 +1,17 @@
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
-menuIcon.onclick = () =>{
+let navLink = document.querySelectorAll('.nav-link');
+menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 }
+
+navLink.forEach(link => {
+    link.addEventListener('click', () => {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    });
+});
 
 
 let sections = document.querySelectorAll('section');
@@ -34,24 +42,24 @@ let navLinks = document.querySelectorAll('header nav a');
 // };
 
 ScrollReveal({
-    reset:true,
-    distance:'80px',
-    duration:2000,
-    delay:200,
-    
-    });
-    
-    ScrollReveal().reveal('.home-content,.heading',{origin:'top'});
-    ScrollReveal().reveal('.home-img,.project-container',{origin:'bottom'});
-    ScrollReveal().reveal('.home-content h1 , .about-img',{origin:'left'});
-    ScrollReveal().reveal('.home-content p , .about-img',{origin:'right'});
+    reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200,
+
+});
+
+ScrollReveal().reveal('.home-content,.heading', { origin: 'top' });
+ScrollReveal().reveal('.home-img,.project-container', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content h1 , .about-img', { origin: 'left' });
+ScrollReveal().reveal('.home-content p , .about-img', { origin: 'right' });
 
 
-const typed = new Typed('.multiple-text',{
-    strings: ['Programmer!','Java Developer.','Javascript Developer.'],
-    typeSpeed:100,
-    backSpeed:50,
-    backDeley:100,
-    loop:true
+const typed = new Typed('.multiple-text', {
+    strings: ['Programmer!', 'Java Developer.', 'Javascript Developer.'],
+    typeSpeed: 100,
+    backSpeed: 50,
+    backDeley: 100,
+    loop: true
 
 });
