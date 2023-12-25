@@ -56,7 +56,7 @@ ScrollReveal().reveal('.home-content p , .about-img', { origin: 'right' });
 
 
 const typed = new Typed('.multiple-text', {
-    strings: ['Programmer!', 'Java Developer.', 'Javascript Developer.'],
+    strings: ['Programmer!', 'React-Native-App', 'Java Developer.', 'Javascript Developer.', 'Mobile-App-Developer.'],
     typeSpeed: 100,
     backSpeed: 50,
     backDeley: 100,
