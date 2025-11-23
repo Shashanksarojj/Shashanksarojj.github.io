@@ -15,6 +15,7 @@
   --second-bg-color: #323946;
   --text-color: #fff;
   --main-color: #0ef;
+  --company-color: rgb(198, 203, 47);
 }
 
 html {
@@ -289,6 +290,98 @@ span {
 .project-tech-stack {
   margin-top: 3rem;
   margin-bottom: 2rem;
+}
+
+/* Experience Section */
+.experience {
+    background: var(--second-bg-color);
+}
+
+/* Company name styling */
+.company-name {
+    color: var(--company-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.company-name:hover {
+    color: var(--company-color);
+    text-decoration: underline;
+}
+
+
+.experience h2 {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.experience-card {
+    background: var(--bg-color);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    transition: transform 0.3s ease;
+    border-left: 0.3rem solid var(--main-color);
+}
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 2rem var(--main-color);
+}
+
+.experience-card h3 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin-bottom: 0.5rem;
+}
+
+.experience-period {
+    font-size: 1.4rem;
+    color: #b0b0b0;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.experience-details {
+    list-style: none;
+    padding-left: 1.5rem;
+}
+
+.experience-details li {
+    position: relative;
+    padding-left: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    line-height: 1.6;
+}
+
+.experience-details li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--main-color);
+    font-size: 1.8rem;
+    line-height: 1.2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .experience-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .experience-card h3 {
+        font-size: 1.8rem;
+    }
+    
+    .experience-details li {
+        font-size: 1.4rem;
+    }
 }
 
 .resume h2 {
