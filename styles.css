@@ -11,11 +11,11 @@
   font-family: "Poppins", sans-serif;
 }
 :root {
-  --bg-color: #1f242d;
-  --second-bg-color: #323946;
-  --text-color: #fff;
-  --main-color: #0ef;
-  --company-color: rgb(198, 203, 47);
+  --bg-color: #0a192f;        /* Navy blue */
+  --second-bg-color: #112240;  /* Slightly lighter navy */
+  --text-color: #ccd6f6;      /* Light blue-gray */
+  --main-color: #64ffda;      /* Bright teal */
+  --company-color: #8892b0;   /* Muted blue-gray */
 }
 
 html {
@@ -178,7 +178,7 @@ span {
 
 .about-img img {
   width: 20vw;
-  border-radius: 25%;
+  /* border-radius: 25%; */
   /* border-top-left-radius: 50% 50%; 
   border-top-right-radius: 50% 50%; border-bottom-right-radius: 50% 50%; border-bottom-left-radius: 50% 50%;  */
   animation: floatImage 4s ease-in-out infinite;
