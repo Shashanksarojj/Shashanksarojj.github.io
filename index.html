@@ -14,15 +14,40 @@
         href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./styles.css">
-    <script src="script.js" defer></script>
+    <script type="module" src="/src/main.ts"></script>
 </head>
 
 <body>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-logo">
+            <span class="logo-bracket">&lt;</span>SD<span class="logo-bracket">/&gt;</span>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Custom Cursor (desktop only) -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-ring"></div>
+
+    <!-- Particle Background Canvas -->
+    <canvas id="particles-canvas"></canvas>
 
     <!-- Animated background grid -->
     <div class="bg-grid"></div>
     <div class="bg-glow bg-glow-1"></div>
     <div class="bg-glow bg-glow-2"></div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" role="alert" aria-live="polite"></div>
 
     <header class="header">
         <a href="#home" class="logo">
@@ -210,75 +235,83 @@
         <div class="section-label">03 — Skills</div>
         <h2 class="section-title">Technical <span class="accent">Skills</span></h2>
         <div class="skills-grid">
-            <div class="skill-card reveal" data-skill="React Native">
+            <div class="skill-card reveal">
                 <i class="devicon-react-original colored"></i>
                 <span>React Native</span>
             </div>
-            <div class="skill-card reveal" data-skill="React Native">
+            <div class="skill-card reveal">
                 <i class="devicon-react-original colored"></i>
                 <span>React</span>
             </div>
-            <div class="skill-card reveal" data-skill="Java">
+            <div class="skill-card reveal">
+                <i class="devicon-typescript-plain colored"></i>
+                <span>TypeScript</span>
+            </div>
+            <div class="skill-card reveal">
                 <i class="devicon-java-plain-wordmark colored"></i>
                 <span>Java</span>
             </div>
-            <div class="skill-card reveal" data-skill="JavaScript">
+            <div class="skill-card reveal">
                 <i class="devicon-javascript-plain colored"></i>
                 <span>JavaScript</span>
             </div>
-            <div class="skill-card reveal" data-skill="Spring Boot">
+            <div class="skill-card reveal">
+                <i class="devicon-python-plain colored"></i>
+                <span>Python</span>
+            </div>
+            <div class="skill-card reveal">
                 <i class="devicon-spring-plain-wordmark colored"></i>
                 <span>Spring Boot</span>
             </div>
-            <div class="skill-card reveal" data-skill="C">
+            <div class="skill-card reveal">
                 <i class="devicon-c-plain colored"></i>
                 <span>C</span>
             </div>
-            <div class="skill-card reveal" data-skill="HTML5">
+            <div class="skill-card reveal">
                 <i class="devicon-html5-plain-wordmark colored"></i>
                 <span>HTML5</span>
             </div>
-            <div class="skill-card reveal" data-skill="CSS3">
+            <div class="skill-card reveal">
                 <i class="devicon-css3-plain-wordmark colored"></i>
                 <span>CSS3</span>
             </div>
-            <div class="skill-card reveal" data-skill="Bootstrap">
+            <div class="skill-card reveal">
                 <i class="devicon-bootstrap-plain-wordmark colored"></i>
                 <span>Bootstrap</span>
             </div>
-            <div class="skill-card reveal" data-skill="MySQL">
+            <div class="skill-card reveal">
                 <i class="devicon-mysql-plain-wordmark colored"></i>
                 <span>MySQL</span>
             </div>
-            <div class="skill-card reveal" data-skill="PostgreSQL">
+            <div class="skill-card reveal">
                 <i class="devicon-postgresql-plain-wordmark colored"></i>
                 <span>PostgreSQL</span>
             </div>
-            <div class="skill-card reveal" data-skill="Docker">
+            <div class="skill-card reveal">
                 <i class="devicon-docker-plain colored"></i>
                 <span>Docker</span>
             </div>
-            <div class="skill-card reveal" data-skill="Git">
+            <div class="skill-card reveal">
                 <i class="devicon-git-plain colored"></i>
                 <span>Git</span>
             </div>
-            <div class="skill-card reveal" data-skill="VS Code">
+            <div class="skill-card reveal">
                 <i class="devicon-visualstudio-plain colored"></i>
                 <span>VS Code</span>
             </div>
-            <div class="skill-card reveal" data-skill="Figma">
+            <div class="skill-card reveal">
                 <i class="devicon-figma-plain colored"></i>
                 <span>Figma</span>
             </div>
-            <div class="skill-card reveal" data-skill="RabbitMQ">
+            <div class="skill-card reveal">
                 <i class="devicon-rabbitmq-original colored"></i>
                 <span>RabbitMQ</span>
             </div>
-            <div class="skill-card reveal" data-skill="Kubernetes">
+            <div class="skill-card reveal">
                 <i class="devicon-kubernetes-plain colored"></i>
                 <span>Kubernetes</span>
             </div>
-            <div class="skill-card reveal" data-skill="Kafka">
+            <div class="skill-card reveal">
                 <i class="devicon-apachekafka-original colored"></i>
                 <span>Kafka</span>
             </div>
@@ -545,7 +578,10 @@
                 </div>
                 <div class="contact-item">
                     <i class='bx bx-envelope'></i>
-                    <a href="mailto:shashankdw1704@gmail.com">Shashankdw1704@gmail.com</a>
+                    <a href="mailto:shashankdw1704@gmail.com">shashankdw1704@gmail.com</a>
+                    <button class="copy-email-btn" data-email="shashankdw1704@gmail.com" title="Copy email address">
+                        <i class='bx bx-copy'></i> Copy
+                    </button>
                 </div>
                 <div class="contact-item">
                     <i class='bx bx-map'></i>
@@ -567,11 +603,10 @@
 
     <script src="https://unpkg.com/github-calendar@latest/dist/github-calendar.min.js"></script>
     <script>
-        GitHubCalendar(".calendar", "Shashanksarojj", { responsive: true });
+        document.addEventListener('DOMContentLoaded', function () {
+            GitHubCalendar(".calendar", "Shashanksarojj", { responsive: true });
+        });
     </script>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
-    <script src="./portfolio.js"></script>
 </body>
 
 </html>

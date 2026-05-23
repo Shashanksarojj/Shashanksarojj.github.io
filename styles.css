@@ -681,3 +681,161 @@ footer {
   .git-img { flex: 1 1 100%; height: auto; }
   .about-stats { justify-content: space-around; }
 }
+
+/* ===== SCROLL PROGRESS BAR ===== */
+.scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(to right, var(--accent), var(--accent2));
+  z-index: 9999;
+  transition: width 0.08s linear;
+  pointer-events: none;
+}
+
+/* ===== CUSTOM CURSOR ===== */
+.cursor-dot {
+  position: fixed;
+  width: 8px; height: 8px;
+  background: var(--accent);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transition: opacity 0.3s, transform 0.1s ease, background 0.2s;
+  will-change: transform;
+}
+.cursor-ring {
+  position: fixed;
+  width: 32px; height: 32px;
+  border: 1.5px solid rgba(77, 240, 192, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9997;
+  transition: opacity 0.3s, width 0.2s ease, height 0.2s ease, border-color 0.2s, background 0.2s;
+  will-change: transform;
+}
+.cursor-dot.cursor-hover {
+  transform: scale(0) !important;
+}
+.cursor-ring.cursor-hover {
+  width: 52px;
+  height: 52px;
+  border-color: var(--accent);
+  background: rgba(77, 240, 192, 0.06);
+}
+@media (max-width: 768px) {
+  .cursor-dot,
+  .cursor-ring { display: none; }
+}
+
+/* ===== PARTICLES CANVAS ===== */
+#particles-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.55;
+}
+
+/* ===== BACK TO TOP BUTTON ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 3rem; right: 3rem;
+  width: 4.8rem; height: 4.8rem;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--accent);
+  font-size: 2.4rem;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: var(--transition);
+  z-index: 900;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  background: var(--accent-glow);
+  border-color: var(--accent);
+  box-shadow: 0 0 24px var(--accent-glow);
+}
+
+/* ===== TOAST NOTIFICATION ===== */
+.toast {
+  position: fixed;
+  bottom: 3rem; left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--bg2);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  padding: 1.4rem 2.4rem;
+  font-family: var(--font-mono);
+  font-size: 1.4rem; color: var(--accent);
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ===== LOADER ===== */
+.loader {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 99999;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+.loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.loader-logo {
+  font-family: var(--font-mono);
+  font-size: 4rem; font-weight: 700;
+  color: var(--text);
+  animation: loaderPulse 1.2s ease-in-out infinite;
+}
+.loader-logo .logo-bracket { color: var(--accent); }
+@keyframes loaderPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+/* ===== ACTIVE NAV LINK ===== */
+.navbar .nav-link.active {
+  color: var(--accent);
+}
+
+/* ===== COPY EMAIL BUTTON ===== */
+.copy-email-btn {
+  font-family: var(--font-mono);
+  font-size: 1.2rem; color: var(--text-dim);
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.3rem 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  margin-left: 0.8rem;
+}
+.copy-email-btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-glow);
+}
